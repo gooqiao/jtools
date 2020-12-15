@@ -1,6 +1,0 @@
-{
-  "presets": ["@babel/env", "@babel/typescript"],
-  "plugins": [],
-  "exclude": ["./node_modules", "./lib"],
-  "include": ["./index.ts"]
-}
