@@ -31,12 +31,12 @@
 - 安装和配置 jest
 
   `npm i jest`  
-  生成配置: `jest --init`
+  生成配置: `npx jest --init`
 
-- 安装 babel
+<!-- - 安装 babel
 
-  `npm i -D babel-jest @babel/core @babel/preset-env @babel/preset-typescript`  
-   安装`babel-jest`是因为 jest 需要.
+  `npm i -D babel-jest @babel/core @babel/preset-env @babel/preset-typescript`
+   安装`babel-jest`是因为 jest 需要. -->
 
 - 配置 npm script
 
@@ -88,9 +88,12 @@
 
   然后我们运行测试, 执行`npm run test`, 发现报错: ` SyntaxError: Cannot use import statement outside a module`
 
-  这表示 jest 不支持 es module 写法, 可以通过修改 jest 配置解决
+  这表示 jest 不支持 es module 写法, 没关系, 可以通过修改 jest 配置解决
 
-  在 jest 配置文件 jest.config.js 里写上` transform: { "\\.ts$": ['ts-jest'] }`  
-   然后执行`npm i ts-jest`
+  在 jest 配置文件 jest.config.js 里写上` transform: { "\\.ts$": ['ts-jest'] }`
+
+  然后执行`npm i ts-jest`
 
   再次运行测试, OK, 测试代码成功运行, 测试通过.
+
+一个漂亮的 js 工具库就这样搭建成功了, 支持 ts, 支持单元测试
