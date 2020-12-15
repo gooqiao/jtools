@@ -31,7 +31,16 @@
 - 安装和配置 jest
 
   `npm i jest`  
-  生成配置: `npx jest --init`
+   生成配置: `npx jest --init`
+  过程中会有些选项让你选择, 我选择的是:
+
+  ✔ Would you like to use Typescript for the configuration file? … no  
+  ✔ Choose the test environment that will be used for testing › jsdom (browser-like)  
+  ✔ Do you want Jest to add coverage reports? … yes  
+  ✔ Which provider should be used to instrument code for coverage? › v8  
+  ✔ Automatically clear mock calls and instances between every test? … yes
+
+  成功后会在增加 jest.config.js 文件
 
 <!-- - 安装 babel
 
