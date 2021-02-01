@@ -1,9 +1,9 @@
-import { isArray, isObject } from './_utils';
+import { isArray, isObject } from "./_utils";
 
 export function transformFirstKey(
   jsonObj: N | N[],
   deep: boolean = false,
-  type: 'uppercase' | 'lowercase'
+  type: "uppercase" | "lowercase"
 ) {
   if (isArray(jsonObj)) {
     for (const item of jsonObj) {
@@ -13,7 +13,7 @@ export function transformFirstKey(
     for (var key in jsonObj) {
       const firstKey = key.substring(0, 1);
       const newKey =
-        (type === 'uppercase'
+        (type === "uppercase"
           ? firstKey.toUpperCase()
           : firstKey.toLowerCase()) + key.substring(1);
 
@@ -21,7 +21,9 @@ export function transformFirstKey(
       if (deep && isObject(jsonObj[newKey])) {
         transformFirstKey(jsonObj[newKey], deep, type);
       }
-      delete jsonObj[key];
+      if (newKey !== key) {
+        delete jsonObj[key];
+      }
     }
   }
   return jsonObj;

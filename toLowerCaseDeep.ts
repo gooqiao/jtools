@@ -1,5 +1,5 @@
-import { transformFirstKey } from './_toUpperCase';
+import { transformFirstKey } from "./_toUpperCase";
 
-export function toLowerCaseDeep(jsonObj: N | N[]) {
-  return transformFirstKey(jsonObj, true, 'lowercase');
+export default function toLowerCaseDeep(jsonObj: N | N[]) {
+  return transformFirstKey(jsonObj, true, "lowercase");
 }
