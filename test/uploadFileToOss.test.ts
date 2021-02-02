@@ -1,5 +1,4 @@
 import uploadToOSS from "../uploadToOSS";
-import { readFileSync } from "fs";
 
 describe("upload file to oss", () => {
   it("upload img call oss put", async () => {
@@ -19,8 +18,5 @@ describe("upload file to oss", () => {
         "Must provide String/Buffer/ReadableStream for put."
       );
     }
-
-    // const data = readFileSync("/Users/ming/code/jtools/uploadToOSS.ts", "utf8");
-    // const res = await uploadToOSS([data], 0);
   });
 });
