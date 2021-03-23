@@ -12,8 +12,8 @@ export default async function uploadFile(
 
   const client = new OSS({
     region: "oss-cn-shenzhen",
-    accessKeyId: "LTAI4G3iww5P1YCKG7mAdnUc",
-    accessKeySecret: "suPnZWKm62gDD9mCDEVuxdFxTRIYdT",
+    accessKeyId: "",
+    accessKeySecret: "",
     bucket: "tourmind-store",
   });
   // 上传文件
