@@ -12,12 +12,12 @@ babel.config.js 中配置
     [
       "component",
       {
-        "libraryName": "tm-jtools",
+        "libraryName": "m-jtools",
         "libDir": "es",
         "style": false,
         "camel2Dash": false
       },
-      "tm-jtools"
+      "m-jtools"
     ]
   ]
 }
